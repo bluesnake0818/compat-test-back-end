@@ -33,8 +33,15 @@ function deleteFriend(req, res) {
   .catch(err => res.json(err))
 }
 
+function update(req, res) {
+  Friend.findByIdAndUpdate(req.params.id, req.body, {new: true})
+  .then(friend => res.json(friend))
+  .catch(err => res.json(err))
+}
+
 export {
   index,
   create,
   deleteFriend as delete,
+  update,
 }

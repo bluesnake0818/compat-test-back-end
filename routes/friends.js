@@ -12,7 +12,7 @@ router.get('/', friendsCtrl.index)
 /*---------- Protected Routes ----------*/
 router.use(decodeUserFromToken)
 router.post('/', checkAuth, friendsCtrl.create)
-// router.put('/:id', checkAuth, puppiesCtrl.update)
+router.put('/:id', checkAuth, friendsCtrl.update)
 router.delete('/:id', checkAuth, friendsCtrl.delete)
 
 
