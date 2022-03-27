@@ -13,7 +13,7 @@ router.get('/', friendsCtrl.index)
 router.use(decodeUserFromToken)
 router.post('/', checkAuth, friendsCtrl.create)
 // router.put('/:id', checkAuth, puppiesCtrl.update)
-// router.delete('/:id', checkAuth, puppiesCtrl.delete)
+router.delete('/:id', checkAuth, friendsCtrl.delete)
 
 
 

@@ -27,7 +27,14 @@ function create(req, res) {
   })
 }
 
+function deleteFriend(req, res) {
+  Friend.findByIdAndDelete(req.params.id)
+  .then(friend => res.json(friend))
+  .catch(err => res.json(err))
+}
+
 export {
   index,
   create,
+  deleteFriend as delete,
 }
