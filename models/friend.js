@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 
 const friendSchema = new Schema({
   name: {type: String, required: true},
-  dob: {type: String, required: true},
+  birthYear: {type: String, required: true},
   zodiac: String,
   owner: {type: mongoose.Schema.Types.ObjectId, ref: "Profile"},
   // breed: {type: String, default: 'Mixed'},
