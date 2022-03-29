@@ -9,4 +9,13 @@ function index(req, res) {
   })
 }
 
-export { index }
+function show(req, res) {
+  Profile.findById(req.params.id)
+  .then(orofile => res.json(profile))
+  .catch(err => res.json(err))
+}
+
+export { 
+  index, 
+  show,
+}
