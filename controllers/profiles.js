@@ -9,13 +9,13 @@ function index(req, res) {
   })
 }
 
-function show(req, res) {
-  Profile.findById(req.params.id)
-  .then(orofile => res.json(profile))
-  .catch(err => res.json(err))
-}
+// function show(req, res) {
+//   Profile.findById(req.params.id)
+//   .then(profile => res.json(profile))
+//   .catch(err => res.json(err))
+// }
 
 export { 
   index, 
-  show,
+  // show,
 }
